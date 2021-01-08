@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es - ES">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Calendarios / Autocompletado</title>
+
+		<meta name="descripcion" content="trabajo con formularios">
+		<meta name="autor" content="D. S."/>
+		<meta name="viewport" content="width=device-width, initial-escale=1.0">
+
+		<link rel="stylesheet" href="./style.css">
+
+	</head>
+    <body>
+        <header>
+            <h1>Esto es una prueba con calendarios y autocompletado</h1>
+        </header>
+
+        <main>
+            <form action=""> 
+                <label for="archivo" class="contenido">
+                    <span>Suba una foto</span> <br>
+                    <input type="file" id="archivo" 
+                    name="archivo" autocomplete="photo" required>
+                </label> 
+                <label for="nombre" class="contenido">
+                    <span>Escriba su nombre completo</span><br>
+                    <input type="text" id="nombre"
+                    placeholder="nombre / apellido"
+                    name="nombre" autocomplete="name" required>
+                </label>
+                <label for="email" class="contenido">
+                    <span>Escriba su dirección de correo</span><br>
+                    <input type="email" id="email"
+                    placeholder="email@example.com"
+                    name="email" autocomplete="email" required>
+                </label>
+                <label for="password" class="contenido">
+                    <span>Escriba una contraseña</span><br>
+                    <input type="password" id="password"
+                    placeholder="****************"
+                    name="password"
+                    autocomplete="current-password" required>
+                </label>
+                <label for="pais" class="contenido">
+                    <span>Escriba su pais de</span><br>
+                    <input list="pais">
+                    <datalist name="Pais" id="pais">
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Peru">Peru</option>
+                    </datalist>
+                </label>
+                <label for="calendario" class="contenido">
+                    <span>Escriba la fecha de nacimiento</span> <br>
+                    <input type="datetime-local" 
+                    id="calendario" name="calendario"
+                    autocomplete="bday" required>
+                </label>
+                <input type="submit" value="enviar">
+            </form>
+        </main>
+
+        <footer>
+            <p>Derechos Resevados para <a href="https://platzi.com/">Platzi.com</a> </p> 
+        </footer>
+
+    </body>
+</html>

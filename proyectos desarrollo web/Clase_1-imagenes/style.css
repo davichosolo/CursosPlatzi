@@ -1,0 +1,27 @@
+*{
+    text-align: center;
+}
+
+header{
+    margin: 50xp;
+}
+
+h1{
+    font-size: 200xp;
+}
+
+div > ul{
+    list-style: none;
+    display: inline-block;
+}
+
+.imagenes {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  div > figure > img {
+      margin: 0 0;
+      width: 150px;
+      height: 100px;
+  }

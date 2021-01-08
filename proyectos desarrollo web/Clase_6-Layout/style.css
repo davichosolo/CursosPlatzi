@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f6bd60;
+}
+/*header*/
+.centrar{
+    text-align: left;
+}
+.centrar__imagen{
+    width: 10%;
+    padding-left: 20px;
+}
+.centrar img, .titulo, .nav, .nav__list li{
+    display: inline-block;
+    margin: 1% 0;
+    padding-bottom: 20px;
+}
+.nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 1.4rem;
+ }
+.nav__list {
+    list-style: none;
+}
+.nav__list li{
+    padding: 0 2px;
+}
+.nav__list li:last-child{
+    padding-right: 20px;
+}
+.nav__list li::after, .nav__list li::before{
+    content: " | ";
+}
+.nav__list a{
+    text-decoration: none;
+}
+.nav__list a:default{
+    color: #073b4c;
+}
+.nav__list a:hover{
+    color: white;
+}
+.nav__list a:active{
+    color: blue;
+}
+.contenido{
+    justify-content: space-between;
+    align-items: center;
+}
+input[list="busqueda"]{
+    border: none;
+
+    outline: none;
+}
+.contenido label{
+    width: 50%;
+}
+/*main*/
+.main {
+    height: 420px;
+    width: 100%;
+    margin: 0 auto;
+    background-color:#ffffff;
+}
+.lateral {
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+    padding: 10px;
+    background-color: #f5f3f4;
+    float: left;
+}
+.lateral__meme img {
+    display: block;
+    margin: 0.5% auto;
+    border: 1px solid black;
+    background-color: #faf0ca;
+    border-radius: 10px;
+    width: 28.5%;
+}
+.meme{
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+    padding: 10px;
+    position: absolute;
+}
+.meme__principal img{
+    display: block;
+    margin: 0 auto;
+    width: 55%;
+}
+.pie{
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #161a1d;
+    color: #ffffff;
+}
+.pie a{
+    text-decoration: none;
+}
+.pie a:default{
+    color: #073b4c;
+}
+.pie a:hover{
+    color: white;
+}
+.pie a:active{
+    color: blue;
+}
+
