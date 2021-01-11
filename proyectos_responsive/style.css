@@ -7,7 +7,7 @@ html{
     font-size: 62.5%;
 }
 body{
-    background-image: url(./imagenes/fondo.jpg);
+    background-image: url(./imagenes/fondo_2.png);
     background-attachment:fixed;
     background-position: center;
     background-size: 100%;
@@ -88,5 +88,6 @@ body{
 }
 .fin a{
     text-decoration: none;
-    color: rgba(21, 151, 226, 0.8);
+    color: rgba(255, 255, 255, 0.8);
+    font: bold;
 }
