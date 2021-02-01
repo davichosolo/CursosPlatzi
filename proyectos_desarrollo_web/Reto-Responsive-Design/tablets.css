@@ -1,0 +1,7 @@
+.c2, .c3{
+    width: calc(50% - 2rem);
+}
+.c4{
+    height: calc(60vh - 5rem);
+    padding: 10rem 0 10rem 0;
+}

@@ -1,0 +1,49 @@
+.cabecera{
+    display: flex;
+    flex-direction: row;
+}
+.logo{
+    width: 25%;
+    padding-top: 2rem ;
+    height: calc(50vh/2 - 1rem);
+    border-radius: 1rem 0 0 1rem ;
+}
+.nav{
+    width: 75%;
+    padding-top: 3rem ;
+    height: calc(50vh/2 - 1rem);
+    border-radius: 0 1rem 1rem 0;
+}
+.nav li{
+    font-size: 1.8rem;
+}
+.cuerpo {
+    display: flex;
+}
+.articulo{
+    order: 1;
+    width: 70%;
+    border-radius: 0 1rem 1rem 0;
+}
+.lado{
+    width: 30%;
+    padding-top: 2rem;
+    border-radius: 1rem 0 0 1rem ;
+}
+.barra{
+    padding-top: 2rem;
+    height: calc(100vh/4 - 3rem);
+}
+.barra img{
+    max-width: 10rem;
+}
+@media(min-width: 900px){
+    .barra{
+        height: calc(100vh/4 - 2%);
+    }
+}
+@media(min-width:100vh){
+    .lado{
+        padding-top: 4rem;
+    }
+}

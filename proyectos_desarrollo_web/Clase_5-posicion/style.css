@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+    text-align: center;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+main{
+    margin: 100px auto;
+}
+.padre{
+    display: inline-block;
+    border: 1px solid  black;
+    border-radius: 15px;
+}
+.box{
+    display: block;
+    border-radius: 10px;
+}
+#pe{    
+    position: relative;
+    width: 150px;
+    height: 30px;
+    background-color: #4f5d75;
+}
+p{
+    color: white;
+    font-size: 1.6rem;
+}
+.centrar{
+    padding-top: 10%;
+    text-align: center;
+}
+.centrar__imagen {
+    width: 60%;
+}
+#gr{
+    position: absolute;
+    width: 25%;
+    height: 300px;
+    left: 37.5%;
+    top: 20%;
+    background-color: #0a0908;
+}

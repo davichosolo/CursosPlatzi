@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+
+    position: relative;
+    background-image: url(./imagenes/fondo.jpg);
+    background-size: auto;
+    background-position: center;
+}
+/*--------heder------*/
+header{
+    background-color: rgba(0,0,0, .6);
+}
+.padre{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.box{
+    text-transform: uppercase;
+    flex-grow: 1;
+}
+.logo{
+    text-align: center;
+}
+.logo__logo{
+    width: 100%;
+    max-width: 20rem;
+}
+.titulo__title{
+    color: rgb(255,255,255);
+    text-align: center;
+    font-size: inherit;
+ }
+ .titulo{
+     margin: auto 0;
+ }
+ .titulo h1{
+    font-size: 6rem;
+ }
+ .titulo h2{
+     font-size: 4rem;
+}
+.nav{
+    margin: auto 0;
+}
+.nav li{
+    font-size: 1.8rem;
+}
+.nav__barra{
+    list-style: none;
+    text-align: center;
+}
+.nav__barra li{
+    display: inline-block;
+}
+.nav__barra li a{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: rgb(255,255,255);
+    margin: 0 6px;
+}
+.nav__barra a:hover{
+    color: rgba(21, 226, 182, 0.8);
+}
+.nav__barra a:active{
+    color:rgb(82, 8, 151)
+}
+/*--------main------*/
+.principal{
+    display: flex;
+    flex-flow: wrap-reverse;
+}
+.pri{
+    flex-grow: 1;
+}
+.lado{
+    background-color: rgba(71, 69, 69, 0.6);
+    text-align: center;
+    padding: 3rem 0;
+}
+.barra__lateral{
+    width: 100%;
+    max-width: 35rem;
+    background-image: url(./imagenes/istockphoto-658568748-170667a.jpg);
+    background-size: auto;
+    background-position: center;
+    border-radius: 3.5rem;
+}
+.artuculo{
+    background-color: rgba(71, 69, 69, 0.6);
+    padding: 0 3rem;
+}
+.video__principal{
+    width: 100%;
+    max-width: 100rem;
+}
+/*--------footer------*/
+.pie{
+    background-color: rgb(255,255,255, 0.5);
+    text-align: center;
+}
+.pie__img img{
+    width: 10rem;
+    opacity: 0.6;
+    padding: 1% 0;
+}

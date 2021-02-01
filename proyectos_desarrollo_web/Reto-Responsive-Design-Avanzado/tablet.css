@@ -1,0 +1,5 @@
+@media(min-width:700px){
+    .barra{
+        max-width: 32rem;
+    }
+}
