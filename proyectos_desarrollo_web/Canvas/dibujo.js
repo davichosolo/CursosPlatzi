@@ -1,13 +1,16 @@
 //alert("Sí funciona");
 
-var d = document.getElementById("dibujo"); // Obtener valor desde el html
-var lienzo = d.getContext("2d"); // Parte del lienzo
+var canvas = document.getElementById("dibujo"); // Obtener valor desde el html
+var lienzo = canvas.getContext("2d"); // Parte del lienzo
+const width= window.innerWidth; //obtemos el ancho de la ventan
+const height= window.innerHeight; //obtemos el alto de la ventan
+canvas.width= width; //Asignamos ancho a la variable canvas
+canvas.height= height; //Asignamos alto a la variable canvas
 var l = 0;
 var l2 = 0;
 var lineas=50;
 var yi,xf;
 
-//dibujarLinea("red", 0,0,10,300);
 console.log(lienzo);
 
 while(l<lineas){
@@ -15,7 +18,6 @@ while(l<lineas){
 	xf = 10 * (l+1);
 	dibujarLinea(obtenerColorAleatorio(), 0, yi, xf,500);
 	dibujarLinea(obtenerColorAleatorio(), 500, yi, xf,0);
-	//dibujarLinea(color3, 500, yi, xf,0);
 	console.log("Linea es: "+l);
 	l++;
 }
@@ -27,6 +29,7 @@ dibujarLinea(obtenerColorAleatorio(), 1,499,499,499);
 dibujarLinea(obtenerColorAleatorio(), 499,499,499,1);
 dibujarLinea(obtenerColorAleatorio(), 499,1,1,1);
 
+// funcion #1 en invocarse
 function dibujarLinea (color, xinicial, yinicial, xfinal, yfinal){
 	lienzo.beginPath(); // Iniciar trazado
 	lienzo.strokeStyle = color; // Propiedad => Color de la línea
@@ -36,12 +39,7 @@ function dibujarLinea (color, xinicial, yinicial, xfinal, yfinal){
 	lienzo.closePath(); // Cerrar el trazo, levantar el lápiz
 }
 
-function numeroAletario(inferior, superior){
-	numPosibilidades = superior-inferior;
-	numero = Math.floor(Math.random()*numPosibilidades);
-	return parseInt(inferior) + numero;
-}
-
+// funcion #2 en invocarse
 function obtenerColorAleatorio(){
 	hexadecimalArray = new Array("0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F");
 	colorAleatorio="#"; // Inicia el primer valor del color hexadecimal
@@ -52,4 +50,11 @@ function obtenerColorAleatorio(){
 		colorAleatorio += hexadecimalArray[numero]; // Concatena el string del color
 	}
 	return colorAleatorio;
+}
+
+// funcion #3 en invocarse
+function numeroAletario(inferior, superior){
+	numPosibilidades = superior-inferior;
+	numero = Math.floor(Math.random()*numPosibilidades);
+	return parseInt(inferior) + numero;
 }
