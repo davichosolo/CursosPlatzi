@@ -22,8 +22,13 @@ body{
     text-align: center;
 }
 
-
 label{
     font-size: 1.2rem;
     color: var(--letras);
+}
+
+.dibujo{
+    width: calc(100vw / 1.5);
+    margin: 0 auto;
+    text-align: center;
 }
