@@ -1,3 +1,8 @@
+:root{
+    --fondo: rgb(0, 0, 0, 0.88);
+
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -7,5 +12,5 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(0, 0, 0, 0.88);
+    background-color: var(--fondo);
 }

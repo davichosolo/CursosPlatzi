@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6ed9d5f3b6a14d2ed3ff6ae28b132237ca753b0e
 :root{
     --fondo: rgb(61, 56, 56);
     --letras: rgb(255, 255, 255);
@@ -21,6 +24,14 @@ body{
     margin: 0 auto;
     padding: 1rem 0;
     text-align: center;
+<<<<<<< HEAD
+=======
+}
+
+label{
+    font-size: 1.2rem;
+    color: var(--letras);
+>>>>>>> 6ed9d5f3b6a14d2ed3ff6ae28b132237ca753b0e
 }
 
 label{

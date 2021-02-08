@@ -76,3 +76,4 @@ function colorRGB(){
 function generarNumero(numero){
 	return (Math.random()*numero).toFixed(0);
 }
+
