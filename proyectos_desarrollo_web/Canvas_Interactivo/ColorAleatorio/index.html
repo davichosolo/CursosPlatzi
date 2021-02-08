@@ -8,8 +8,22 @@
 </head>
 <body>
 
+    <div class="cuadrante">
+        <p> 
+            <label for="tamaño">Ingese el valor para ancho y alto: </label>
+            <input type="text" id="tamaño">
+            <br>
+            <label for="lineas">Ingese el numero de lineas a dibujar: </label>
+            <input type="text" id="lineas">
+            <br>
+            <label for="color">Escoja un color: </label>
+            <input type="color" id="color">
+            <br>
+            <input type="button" value="Dibujar" id="accion">
+        </p>
+    </div>
     <canvas id="dibujo"></canvas>
-
+    
     <script src="grafico.js"></script>
 </body>
 </html>

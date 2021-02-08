@@ -5,52 +5,30 @@ function init(){
     const lienzo = canvas.getContext("2d");
     const rect= canvas.getBoundingClientRect();
 
-    var range = document.getElementById('rango');
-    var valor = document.getElementById('value');
-    var grosor=1;
-
-    var tema = document.getElementById('tema');
-    var t=1;
+    const range = document.getElementById('rango');
+    const valor = document.getElementById('value');
 
     const width= window.innerWidth;
     const height= window.innerHeight;
     canvas.width= width;
     canvas.height= (height /1.25);
     
-
-    console.log(range);
+    var grosor=1;
+    var t=1;
 
     let mouse = {
         click: false,
         move: false,
         posi: {x :0, y :0}
     };
-
-    
-    t= tema.value;
-    console.log(t);
-
-    if(t===1){
-        tema.oninput= theme_claro();
-    }else if(t===2){
-        tema.oninput= theme_oscuro();
-    }
-
+  
     valor.innerHTML=range.value;
 
     range.oninput = function(){
         grosor=this.value;
         valor.innerHTML=this.value;
     }
-
-    function theme_claro(){
-        document.getElementById("fondo").classList.toggle("fondo__claro");
-    }
-
-    function theme_oscuro(){
-        document.getElementById("fondo").classList.toggle("fondo__oscuro");
-    }
-
+  
     canvas.addEventListener('mousedown', (e) => {
         mouse.posi.x=e.clientX - rect.left;
         mouse.posi.y=e.clientY - rect.top;
@@ -59,12 +37,10 @@ function init(){
 
     canvas.addEventListener('mousemove', (e) => {
         mouse.move= true;
-        if(mouse.click=== true && mouse.move=== true){
-            dibujar(obtenerColorAleatorio(),mouse.posi.x, mouse.posi.y, e.clientX - rect.left, e.clientY - rect.top);
-            mouse.posi.x=e.clientX - rect.left;
-            mouse.posi.y=e.clientY - rect.top;
-            mouse.move= false;
-        }
+        dibujar(obtenerColorAleatorio(),mouse.posi.x, mouse.posi.y, e.clientX - rect.left, e.clientY - rect.top);
+        mouse.posi.x=e.clientX - rect.left;
+        mouse.posi.y=e.clientY - rect.top;
+        mouse.move= false;
     });
 
     canvas.addEventListener('mouseup', (e) => {
@@ -73,9 +49,10 @@ function init(){
         mouse.click=false;
     });
 
-    function dibujar(color, x1, y1, x2, y2){
+
+    function dibujar(col, x1, y1, x2, y2){
         lienzo.beginPath(); // Iniciar trazado
-        lienzo.strokeStyle = color; // Propiedad => Color de la línea
+        lienzo.strokeStyle = col; // Propiedad => Color de la línea
         lienzo.lineWidth= grosor;
         lienzo.moveTo(x1,y1); // Inicio del punto de trazado
         lienzo.lineTo(x2,y2); // Final del punto de trazado

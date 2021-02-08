@@ -1,3 +1,8 @@
+:root{
+    --fondo: rgb(61, 56, 56);
+    --letras: rgb(255, 255, 255);
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -7,6 +12,18 @@
 body{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(61, 56, 56);
+    background-color: var(--fondo);
+}
+
+.cuadrante{
+    width: 50%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+label{
+    font-size: 1.2rem;
+    color: var(--letras);
 }
 
