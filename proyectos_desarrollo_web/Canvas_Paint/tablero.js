@@ -7,14 +7,14 @@ function init(){
 
     const range = document.getElementById('rango');
     const valor = document.getElementById('value');
+    const iris = document.getElementById('random');
+    const rgb = document.getElementById('color');
 
     const width= window.innerWidth;
     const height= window.innerHeight;
     canvas.width= width;
     canvas.height= (height /1.25);
-    
-    var grosor=1;
-    var t=1;
+    var grosor=1, trazo=1;
 
     let mouse = {
         click: false,
@@ -28,7 +28,12 @@ function init(){
         grosor=this.value;
         valor.innerHTML=this.value;
     }
-  
+
+    iris.oninput = function(){
+        trazo=this.value;
+        console.log(trazo); 
+    }
+
     canvas.addEventListener('mousedown', (e) => {
         mouse.posi.x=e.clientX - rect.left;
         mouse.posi.y=e.clientY - rect.top;
@@ -37,9 +42,16 @@ function init(){
 
     canvas.addEventListener('mousemove', (e) => {
         mouse.move= true;
-        dibujar(obtenerColorAleatorio(),mouse.posi.x, mouse.posi.y, e.clientX - rect.left, e.clientY - rect.top);
-        mouse.posi.x=e.clientX - rect.left;
-        mouse.posi.y=e.clientY - rect.top;
+        if(mouse.click===true&& mouse.move===true){
+            if(trazo==1){
+                dibujar(obtenerColorAleatorio(),mouse.posi.x, mouse.posi.y, e.clientX - rect.left, e.clientY - rect.top);
+            }
+            if(trazo==2){
+                dibujar(rgb.value,mouse.posi.x, mouse.posi.y, e.clientX - rect.left, e.clientY - rect.top);
+            }
+            mouse.posi.x=e.clientX - rect.left;
+            mouse.posi.y=e.clientY - rect.top;
+        }
         mouse.move= false;
     });
 
@@ -48,7 +60,6 @@ function init(){
         mouse.posi.y=0;
         mouse.click=false;
     });
-
 
     function dibujar(col, x1, y1, x2, y2){
         lienzo.beginPath(); // Iniciar trazado
