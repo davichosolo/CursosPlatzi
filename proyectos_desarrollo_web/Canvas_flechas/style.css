@@ -45,7 +45,7 @@ label{
 }
 
 .slide{
- /*   -webkit-appearance: none ; */
+    -webkit-appearance: push-button;
     opacity: 0.9;
     -webkit-transition: 0.2s;
     transition: opacity 0.2s;
@@ -91,7 +91,7 @@ label .random{
     color: var(--letras);
     font-size: 1rem;
     position: absolute;
-    left: 30%;
+    right: 25%;
     bottom: 3%;
 }
 
@@ -100,6 +100,6 @@ label .random{
     color: var(--letras);
     font-size: 1rem;
     position: absolute;
-    left: 32%;
+    right: 23%;
     bottom: 3%;
 }

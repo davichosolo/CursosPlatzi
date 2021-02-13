@@ -44,10 +44,10 @@ function init(){
         mouse.move= true;
         if(mouse.click===true&& mouse.move===true){
             if(trazo==1){
-                dibujar(obtenerColorAleatorio(),mouse.posi.x, mouse.posi.y, e.clientX - rect.left, e.clientY - rect.top);
+                dibujar(rgb.value,mouse.posi.x, mouse.posi.y, e.clientX - rect.left, e.clientY - rect.top);
             }
             if(trazo==2){
-                dibujar(rgb.value,mouse.posi.x, mouse.posi.y, e.clientX - rect.left, e.clientY - rect.top);
+                dibujar(obtenerColorAleatorio(),mouse.posi.x, mouse.posi.y, e.clientX - rect.left, e.clientY - rect.top);
             }
             mouse.posi.x=e.clientX - rect.left;
             mouse.posi.y=e.clientY - rect.top;

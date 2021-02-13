@@ -6,6 +6,8 @@ function init(){
 
     const range = document.getElementById('rango');
     const valor = document.getElementById('value');
+    const seleccion = document.getElementById('opciones');
+    const accion = document.getElementById('boton_accion');
     const iris = document.getElementById('random');
     const rgb = document.getElementById('color');
 
@@ -14,7 +16,7 @@ function init(){
     canvas.width= width;
     canvas.height= (height / 1.25);
     var X=(canvas.width/2), Y= (canvas.height /2);
-    var color, grosor=1, trazo=1;
+    var color, maximo, grosor=1, camino=1,trazo=1;
 
     let teclas={
         up: 38,
@@ -33,18 +35,46 @@ function init(){
     rgb.oninput = function(){
         color=this.value;
     }
-
+        
+    
     iris.oninput = function(){
         trazo=this.value;
         console.log(trazo); 
     }
 
-    document.addEventListener('keyup', dibujoTeclado);
+    seleccion.oninput = function(){
+        maximo=this.value;
+        console.log(maximo);
+        if(maximo==0){
+            camino= 0;
+            console.log(camino);
+        }
+        if(maximo==1){
+            camino= 1;
+            console.log(camino);
+        }
+        if(maximo==2){
+            cantidad= 5;
+            console.log(cantidad);
+        }
+        if(maximo==3){
+            camino= 10;
+            console.log(camino);
+        }
+    
+    };
+    
+    accion.addEventListener('click', ejecutar);
 
-    colocarPunto();
+    function ejecutar(){  
+        document.addEventListener('keydown', dibujoTeclado);
+        colocarPunto();
+        
+    }
 
     function dibujoTeclado(evento){
-        var mov= 10;
+        var mov= camino;
+        console.log(camino);
         switch(evento.keyCode){
             case teclas.up:
                 if(trazo==1){
@@ -55,7 +85,6 @@ function init(){
                     dibujarLinea(colorRGB(), X, Y, X, Y - mov);
                     Y = Y - mov;
                 }
-                console.log("moviendo arriba");
             break;
             case teclas.down:
                 if(trazo==1){
@@ -66,7 +95,6 @@ function init(){
                     dibujarLinea(colorRGB(), X, Y, X, Y + mov);
                     Y = Y + mov;
                 }
-                console.log("moviendo abajo");
             break;
             case teclas.left:
                 if(trazo==1){
@@ -77,7 +105,6 @@ function init(){
                     dibujarLinea(colorRGB(), X, Y, X - mov, Y);
                     X = X - mov;
                 }
-                console.log("moviendo izquierda");
             break;
             case teclas.right:
                 if(trazo==1){
@@ -88,7 +115,6 @@ function init(){
                     dibujarLinea(colorRGB(), X, Y, X + mov, Y);
                     X= X + mov;
                 }
-                console.log("moviendo derecha");
             break;
             default:
                 console.log("No es una tecla direccional");
