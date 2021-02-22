@@ -30,9 +30,20 @@ h1{
     background-color: var(--fondo);
 }
 
+.etiquetas{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box{
+    /*flex-basis: 5rem;*/
+    flex-grow: 1;
+}
+
 input{
     width: 10rem;
-    margin: 2rem  auto 0;
+    margin: 0 auto;
 }
 
 label{
@@ -41,15 +52,15 @@ label{
     background-color: var(--etiqueta);
     border-radius: 0.5rem;
     padding: 0.5rem;
-    margin: 2rem 0 auto 1rem;
+    /*margin: 2rem 0 auto 1rem;*/
 }
 
 .slide{
     -webkit-appearance: push-button;
+    position: relative;
     opacity: 0.9;
     -webkit-transition: 0.2s;
     transition: opacity 0.2s;
-    margin-top: 0.5rem;
     border-radius: 1rem;
 }
 
@@ -58,8 +69,8 @@ label{
     color: var(--letras);
     font-size: 1rem;
     position: absolute;
-    left: 15%;
-    bottom: 3%;
+    left: 0;
+    bottom: 0;
 }
 
 .slide::after{
@@ -67,8 +78,8 @@ label{
     color: var(--letras);
     font-size: 1rem;
     position: absolute;
-    left: 22%;
-    bottom: 3%;
+    right: 0;
+    bottom: 0;
 }
 
 label .random{
@@ -77,11 +88,11 @@ label .random{
 
 .slide__tema{
     width: 2rem;
+    position: relative;
 /*    -webkit-appearance: none ;*/
     opacity: 0.9;
     -webkit-transition: 0.2s;
     transition: opacity 0.2s;
-    margin-top: 0.5rem;
     border-radius: 1rem;
     box-shadow: 0px, 1px, 1px, 1px, var(--letras);
 }
@@ -91,8 +102,8 @@ label .random{
     color: var(--letras);
     font-size: 1rem;
     position: absolute;
-    right: 25%;
-    bottom: 3%;
+    left: 0;
+    bottom: 0;
 }
 
 .slide__tema::after{
@@ -100,6 +111,6 @@ label .random{
     color: var(--letras);
     font-size: 1rem;
     position: absolute;
-    right: 23%;
-    bottom: 3%;
+    right: 0;
+    bottom: 0;
 }
